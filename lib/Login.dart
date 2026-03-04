@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Info.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
