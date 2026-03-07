@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'Start_2.dart';
 
-
-class Start extends StatefulWidget {
-  const Start({super.key});
+class Start_4 extends StatefulWidget {
+  const Start_4({super.key});
 
   @override
-  State<Start> createState() => _StartState();
+  State<Start_4> createState() => _StartState();
 }
 
-class _StartState extends State<Start> {
-  int _seconds = 20;
+class _StartState extends State<Start_4> {
+  int _seconds = 40;
   Timer? _timer;
 
   @override
@@ -20,7 +18,6 @@ class _StartState extends State<Start> {
     _startTimer();
   }
 
-  // Hàm xử lý logic đếm ngược
   void _startTimer() {
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (_seconds > 0) {
@@ -35,7 +32,7 @@ class _StartState extends State<Start> {
   }
 
   void _navigateToNextPage() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => const Start_2()));
+    // Navigator.push(context, MaterialPageRoute(builder: (context) => const Start_3()));
     print("Hết thời gian khởi động! Chuyển sang bài tập chính.");
   }
 
@@ -54,7 +51,7 @@ class _StartState extends State<Start> {
           Stack(
             children: [
               Image.asset(
-                'imgs/6.jpeg',
+                'imgs/start3.jpg',
                 width: double.infinity,
                 height: 350,
                 fit: BoxFit.cover,
@@ -72,12 +69,8 @@ class _StartState extends State<Start> {
 
           const SizedBox(height: 40),
           const Text(
-              "Chuẩn Bị",
+              "Nhảy Dây",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)
-          ),
-          const Text(
-              "Khởi Động",
-              style: TextStyle(fontSize: 20, color: Colors.grey)
           ),
 
           const Spacer(),
