@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
+import 'information.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -58,7 +59,17 @@ class Profile extends StatelessWidget {
                 children: [
                   ListTile(leading: const Icon(Icons.help_outline), title: const Text('Trợ giúp'), trailing: const Icon(Icons.chevron_right), onTap: () {}),
                   const Divider(height: 1, indent: 56),
-                  ListTile(leading: const Icon(Icons.info_outline), title: const Text('Về ứng dụng'), trailing: const Icon(Icons.chevron_right), onTap: () {}),
+                  ListTile(
+                    leading: const Icon(Icons.info_outline),
+                    title: const Text('Về ứng dụng'),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Information()),
+                      );
+                    },
+                  ),
                   const Divider(height: 1, indent: 56),
                   ListTile(
                     leading: const Icon(Icons.logout, color: Colors.red),
