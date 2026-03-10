@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'App Tập Võ',
       theme: ThemeData(primarySwatch: Colors.red),
-      home: const Homeapp(), 
+      home: Homeapp(), 
     );
   }
 }
